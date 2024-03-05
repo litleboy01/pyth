@@ -1,0 +1,29 @@
+import random
+
+welcome_message = "WELCOME TO LITLEBOY GAMES!"
+cuypy_position = random.randint(1, 4)
+
+print("*****************************")
+print(f"** {welcome_message} **")
+print("*****************************")
+
+nama_user = input("masukan nama kamu: ")
+
+print(f'''
+Halo {nama_user}! 
+Coba perhatikan goa dibawah ini  
+
+|__|    |__|    |__|    |__|
+''')
+
+pilihan_user = int(input("Menurut kamu di goa nomor berapa LITLEBOY berada? [1 / 2 / 3 / 4]: "))
+
+conf_answer = input("apakah kamu yakin dengan jawabanmu? [y/t]")
+
+if conf_answer == "t":
+    print(f"{pilihan_user}")
+else :
+    if pilihan_user == cuypy_position:
+        print(f"Selamat Kamu Menang!, kamu menebak {pilihan_user}, LITLEBOY ada di goa nomer {cuypy_position}")
+    else:
+        print(f"Maaf kamu kalah!, LITLEBOY berada di goa nomer {cuypy_position}")
